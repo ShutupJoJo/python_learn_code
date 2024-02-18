@@ -1,2 +1,2 @@
-# learn_code
-学习，测试时使用或编写的code
+运维devops方面  
+一个clone过来的python老项目
