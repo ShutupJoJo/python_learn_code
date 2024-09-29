@@ -1,5 +1,5 @@
-# admops
-根据项目划分权限  
+# admops 心血来潮写一写
+根据item划分权限  
 基于django自带权限的权限控制  
 django3  
 vue2  
