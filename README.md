@@ -1,2 +1,2 @@
-运维devops方面  
-一个clone过来的python老项目
+## 运维开发的一个项目
+一个clone过来的项目，适合做drf的学习
