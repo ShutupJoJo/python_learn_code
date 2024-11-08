@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+enum BookType {
+  STORY = 0;
+  LOVE = 1;
+}
+
+message Book {
+  string name = 1;
+  BookType type = 2;
+  // <"Python", 24>, <"Java", 12>
+  map<string, int32> tags = 3;
+  oneof author_one_of {
+    string username = 4;
+    string realname = 5;
+  }
+}
+
+message BookListRequest {
+  int32 page = 1;
+}
+
+message BookListResponse {
+  repeated Book books = 1;
+}
+
+service BookService{
+  rpc BookList(BookListRequest) returns (BookListResponse);
+}

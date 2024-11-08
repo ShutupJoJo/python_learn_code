@@ -1,0 +1,35 @@
+// 指定版本号为3
+syntax = "proto3";
+
+/*
+这是一个Article消息
+*/
+message Article{
+  int32 id = 1;
+  string title = 2;
+  string content = 3;
+  string create_time = 4;
+}
+
+message ArticleListRequest{
+  int32 page = 1;
+  int32 page_size = 2;
+}
+
+message ArticleListResponse{
+  // repeated Article：这是数据类型，文章的列表
+  repeated Article articles = 1;
+}
+
+message ArticleDetailRequest {
+  int32 pk = 1;
+}
+
+message ArticleDetailResponse {
+  Article article = 1;
+}
+
+service ArticleService{
+  rpc ArticleList(ArticleListRequest) returns (ArticleListResponse);
+  rpc ArticleDetail(ArticleDetailRequest) returns (ArticleDetailResponse);
+}
